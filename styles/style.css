@@ -1,0 +1,13 @@
+html {
+    background-color: black;
+}
+
+body {
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+}
+
+h1 {
+    color: red;
+}
