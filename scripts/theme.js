@@ -1,0 +1,82 @@
+let color0 = "#05070d";
+let color1 = "#181a26";
+let color2 = "#353a4d";
+let color3 = "#a7aecc";
+let color4 = "#e1e5f2";
+let color5 = "#a60731";
+let color6 = "#f21b54";
+let bgDarkPath = "../media/bg_dark.png";
+let bgLightPath = "../media/bg_light.png";
+
+let isLightMode = false;
+
+let switchButton;
+let switchIcon;
+let bgElement;
+
+document.addEventListener("DOMContentLoaded", () => {
+    switchButton = document.querySelector("#theme_switch");
+    switchIcon = switchButton.querySelector("i");
+    switchButton.addEventListener("click", switchTheme);
+    bgElement = document.querySelector("html");
+
+    let storageValue = localStorage.getItem("enableLightMode");
+    isLightMode = storageValue == "true" ? true : false;
+
+    setTheme(isLightMode);
+});
+
+function switchTheme() {
+    isLightMode = !isLightMode;
+    console.log("switch theme clicked, new isLightMode value: " + isLightMode);
+    setTheme(isLightMode);
+}
+
+function setTheme(setToLightMode) {
+    if (setToLightMode) {
+        setLightMode();
+        isLightMode = true;
+    } else {
+        setDarkMode();
+        isLightMode = false;
+    }
+
+    localStorage.setItem("enableLightMode", isLightMode);
+}
+
+function setDarkMode() {
+    switchIcon.classList.remove("nf-oct-moon");
+    switchIcon.classList.add("nf-oct-sun");
+
+    document.documentElement.style.setProperty("--color-main", color4);
+    document.documentElement.style.setProperty("--color-main-secondary", color3);
+    document.documentElement.style.setProperty("--color-main-tertiary", color2);
+    document.documentElement.style.setProperty("--color-bg", color0);
+    document.documentElement.style.setProperty("--color-bg-secondary", color1);
+
+    setDefaultColors();
+
+    bgElement.style.backgroundImage = "url(" + bgDarkPath + ")";
+}
+
+function setLightMode() {
+    switchIcon.classList.remove("nf-oct-sun");
+    switchIcon.classList.add("nf-oct-moon");
+
+    document.documentElement.style.setProperty("--color-main", color0);
+    document.documentElement.style.setProperty("--color-main-secondary", color1);
+    document.documentElement.style.setProperty("--color-main-tertiary", color2);
+    document.documentElement.style.setProperty("--color-bg", color4);
+    document.documentElement.style.setProperty("--color-bg-secondary", color3);
+
+    setDefaultColors();
+
+    bgElement.style.backgroundImage = "url(" + bgLightPath + ")";
+}
+
+function setDefaultColors() {
+    document.documentElement.style.setProperty("--color-accent", color6);
+    document.documentElement.style.setProperty("--color-accent-secondary", color5);
+    document.documentElement.style.setProperty("--color-navbar-bg", color1);
+    document.documentElement.style.setProperty("--color-navbar-main", color4);
+}

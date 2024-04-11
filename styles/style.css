@@ -4,13 +4,16 @@
 
 /* variables :D */
 :root {
-    --color0: #05070d;
-    --color1: #181a26;
-    --color2: #353a4d;
-    --color3: #a7aecc;
-    --color4: #e1e5f2;
-    --color5: #a60731;
-    --color6: #f21b54;
+    --color-main: #e1e5f2;
+    --color-main-secondary: #a7aecc;
+    --color-main-tertiary: #353a4d;
+    --color-accent: #f21b54;
+    --color-accent-secondary: #a60731;
+    --color-bg: #05070d;
+    --color-bg-secondary: #181a26;
+
+    --color-navbar-bg: #181a26;
+    --color-navbar-main: #e1e5f2;
 
     --scroll-duration: 20s;
     --scroll-item-width: 100px;
@@ -31,17 +34,18 @@ h3 {
 /* #region general tag theming */
 
 html {
-    background-image: url(../media/portfolio_bg.png);
+    background-color: var(--color-bg);
+    background-image: url(../media/bg_dark.png);
     background-size: 300px;
 }
 
 body {
     margin: 0;
-    color: var(--color3);
+    color: var(--color-main-secondary);
 }
 
 main {
-    background-color: var(--color0);
+    background-color: var(--color-bg);
     width: 80%;
     max-width: 800px;
     margin: 0 auto;
@@ -49,16 +53,16 @@ main {
 }
 
 h1 {
-    color: var(--color6);
+    color: var(--color-accent);
     font-weight: bold;
 }
 
 h2 {
-    color: var(--color6);
+    color: var(--color-accent);
 }
 
 h3 {
-    color: var(--color4);
+    color: var(--color-main);
 }
 
 img {
@@ -67,23 +71,23 @@ img {
 
 a {
     &:link {
-        color: var(--color6);
+        color: var(--color-accent);
     }
 
     &:visited {
-        color: var(--color5);
+        color: var(--color-accent-secondary);
     }
 
     &:focus {
-        color: var(--color3);
+        color: var(--color-main-secondary);
     }
 
     &:hover {
-        color: var(--color3);
+        color: var(--color-main-secondary);
     }
 
     &:active {
-        color: var(--color2);
+        color: var(--color-main-tertiary);
     }
 }
 
@@ -92,7 +96,7 @@ a {
 /* #region class theming */
 
 .navbar {
-    background-color: var(--color1);
+    background-color: var(--color-navbar-bg);
 
     display: flex;
     align-items: center;
@@ -114,7 +118,7 @@ a {
 }
 
 .bar-link {
-    color: var(--color4);
+    color: var(--color-navbar-main);
     font-size: 1.3em;
     text-decoration: none;
 
@@ -122,23 +126,23 @@ a {
     margin: 0 20px;
 
     &:link {
-        color: var(--color4);
+        color: var(--color-navbar-main);
     }
 
     &:visited {
-        color: var(--color4);
+        color: var(--color-navbar-main);
     }
 
     &:focus {
-        color: var(--color6);
+        color: var(--color-accent);
     }
 
     &:hover {
-        color: var(--color6);
+        color: var(--color-accent);
     }
 
     &:active {
-        color: var(--color5);
+        color: var(--color-accent-secondary);
     }
 }
 
