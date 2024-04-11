@@ -15,6 +15,9 @@
     --color8: #f2a910;
     --color9: #196fa3;
     --color10: #0999f2;
+
+    --scroll-duration: 20s;
+    --scroll-item-width: 100px;
 }
 
 /* fonts! */
@@ -126,5 +129,32 @@ a {
 
     &:active {
         color: var(--color5);
+    }
+}
+
+.horiz-scroller {
+    overflow-x: hidden;
+    white-space: nowrap;
+    font-size: 0;
+    position: relative;
+
+    .scroll-item {
+        position: relative;
+        top: 0%;
+        left: 0px;
+        width: 100px;
+        animation: scroll-item var(--scroll-duration) linear infinite;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@keyframes scroll-item {
+    from {
+        left: -1500px;
+    }
+
+    to {
+        left: 0px;
     }
 }
