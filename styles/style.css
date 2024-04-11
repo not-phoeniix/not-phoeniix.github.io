@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @import url("https://www.nerdfonts.com/assets/css/webfont.css");
 
-/* color variables :D */
+/* variables :D */
 :root {
     --color0: #05070d;
     --color1: #181a26;
@@ -28,7 +28,7 @@ h3 {
     font-family: "Roboto Mono";
 }
 
-/* general tag theming */
+/* #region general tag theming */
 
 html {
     background-image: url(../media/portfolio_bg.png);
@@ -87,7 +87,9 @@ a {
     }
 }
 
-/* class theming */
+/* #endregion */
+
+/* #region class theming */
 
 .navbar {
     background-color: var(--color1);
@@ -166,3 +168,5 @@ a {
         left: 0px;
     }
 }
+
+/* #endregion */
