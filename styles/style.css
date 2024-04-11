@@ -1,27 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://www.nerdfonts.com/assets/css/webfont.css");
+
+/* color variables :D */
+:root {
+    --color0: #05070d;
+    --color1: #181a26;
+    --color2: #353a4d;
+    --color3: #a7aecc;
+    --color4: #e1e5f2;
+    --color5: #a60731;
+    --color6: #f21b54;
+    --color7: #a67b21;
+    --color8: #f2a910;
+    --color9: #196fa3;
+    --color10: #0999f2;
+}
+
+/* fonts! */
+
+* {
+    font-family: "DM Sans";
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Roboto Mono";
+}
+
+/* general tag theming */
+
 html {
-    background-color: black;
+    background-image: url(../media/portfolio_bg.png);
+    background-size: 300px;
 }
 
 body {
     margin: 0;
-    color: white;
+    color: var(--color3);
 }
 
 main {
+    background-color: var(--color0);
     width: 80%;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 5px 30px;
 }
 
 h1 {
-    color: #FF0048;
+    color: var(--color6);
+    font-weight: bold;
 }
 
 h2 {
-    color: #4a89ff;
+    color: var(--color6);
 }
 
-.titlebar {
-    background-color: #222222;
+h3 {
+    color: var(--color4);
+}
+
+img {
+    max-width: 500px;
+}
+
+a {
+    &:link {
+        color: var(--color6);
+    }
+
+    &:visited {
+        color: var(--color5);
+    }
+
+    &:hover {
+        color: var(--color3);
+    }
+
+    &:active {
+        color: var(--color2);
+    }
+}
+
+/* class theming */
+
+.navbar {
+    background-color: var(--color1);
 
     display: flex;
     align-items: center;
@@ -30,13 +96,35 @@ h2 {
     position: sticky;
     top: 0;
     padding: 0px 20px;
+}
 
-    & div {
-        display: flex;
-        align-items: center;
+.bar-container {
+    align-items: center;
+    display: flex;
+    margin: 0px 5px;
 
-        & p {
-            margin: 0px 10px;
-        }
+    h1 {
+        margin-right: 20px;
+    }
+}
+
+.bar-link {
+    color: var(--color4);
+    font-size: 1.3em;
+    text-decoration: none;
+
+    padding-top: 3px;
+    margin: 0 20px;
+
+    &:visited {
+        color: var(--color4);
+    }
+
+    &:hover {
+        color: var(--color6);
+    }
+
+    &:active {
+        color: var(--color5);
     }
 }
