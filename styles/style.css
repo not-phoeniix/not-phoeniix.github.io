@@ -11,10 +11,6 @@
     --color4: #e1e5f2;
     --color5: #a60731;
     --color6: #f21b54;
-    --color7: #a67b21;
-    --color8: #f2a910;
-    --color9: #196fa3;
-    --color10: #0999f2;
 
     --scroll-duration: 20s;
     --scroll-item-width: 100px;
@@ -78,6 +74,10 @@ a {
         color: var(--color5);
     }
 
+    &:focus {
+        color: var(--color3);
+    }
+
     &:hover {
         color: var(--color3);
     }
@@ -119,8 +119,16 @@ a {
     padding-top: 3px;
     margin: 0 20px;
 
+    &:link {
+        color: var(--color4);
+    }
+
     &:visited {
         color: var(--color4);
+    }
+
+    &:focus {
+        color: var(--color6);
     }
 
     &:hover {
@@ -138,7 +146,7 @@ a {
     font-size: 0;
     position: relative;
 
-    .scroll-item {
+    & .scroll-item {
         position: relative;
         top: 0%;
         left: 0px;
