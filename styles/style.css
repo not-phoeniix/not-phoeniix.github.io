@@ -19,7 +19,7 @@
     --scroll-item-width: 100px;
 }
 
-/* fonts! */
+/* #region general tag theming */
 
 * {
     font-family: "DM Sans";
@@ -31,8 +31,6 @@ h3 {
     font-family: "Roboto Mono";
     clear: both;
 }
-
-/* #region general tag theming */
 
 html {
     background-color: var(--color-bg);
@@ -85,30 +83,79 @@ a {
     }
 }
 
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 0px 20px;
-    background-color: var(--color-bg);
-    height: 100%;
-
-    box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.05);
-}
-
 /* #endregion */
 
-/* #region class theming */
+/* #region main content things */
 
 .center-content {
     background-color: var(--color-bg);
     width: 80%;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 5px 30px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
+
+.float {
+    width: 180px;
+    height: 140px;
+
+    object-fit: cover;
+    object-position: 50% 100%;
+
+    &.right {
+        float: right;
+    }
+
+    &.left {
+        float: left;
+    }
+}
+
+.flip-h {
+    transform: scaleX(-1);
+}
+
+.grid-collage {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+
+    & img {
+        width: 100%;
+    }
+
+    & .house-build {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+}
+
+/* #endregion */
+
+/* #region footer */
+
+footer {
+    box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 5px 30px;
+
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* #endregion */
+
+/* #region navbar */
 
 .navbar {
     background-color: var(--color-navbar-bg);
@@ -121,7 +168,7 @@ footer {
     top: 0;
     padding: 0px 20px;
 
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -187,53 +234,38 @@ footer {
         z-index: 2;
 
         & a {
-            color: white;
+            color: var(--color-navbar-main);
             text-decoration: none;
             display: block;
+
+            font-size: 1.1rem;
+            text-align: center;
+            padding: 2px 10px;
+
+            &:hover {
+                background-color: var(--color-accent);
+            }
         }
     }
 
-    &:hover .dropdown-content {
-        display: block;
+    &:hover {
+        & .bar-link {
+            color: var(--color-accent);
+        }
+
+        & .dropdown-content {
+            display: block;
+        }
     }
 }
 
-.float {
-    width: 180px;
-    height: 140px;
-
-    object-fit: cover;
-    object-position: 50% 100%;
-
-    &.right {
-        float: right;
-    }
-
-    &.left {
-        float: left;
-    }
+.menu-opener {
+    display: none;
 }
 
-.fliph {
-    transform: scaleX(-1);
-}
+/* #endregion */
 
-.grid-collage {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
-
-    & img {
-        width: 100%;
-    }
-
-    & .house-build {
-        grid-column: 1 / span 2;
-        grid-row: 2;
-        margin: 0 auto;
-        object-fit: cover;
-    }
-}
+/* #region image scrolling */
 
 .horiz-scroller {
     overflow-x: hidden;
@@ -266,13 +298,52 @@ footer {
     }
 }
 
-@keyframes scroll-adumbration {
-    from {
-        left: 0px;
+/* #endregion */
+
+/* #region responsiveness/media queries */
+
+@media screen and (max-width: 700px) {
+    .bar-link {
+        font-size: 1rem;
     }
 
-    to {
-        left: -1130px;
+    .bar-title {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .center-content {
+        width: 100%;
+        padding: 0px;
+        box-shadow: none;
+    }
+
+    main {
+        padding: 0px 10px;
+        background-image: none;
+        background: var(--color-bg);
+    }
+
+    .footer-links {
+        width: 100%;
+        padding: 0;
+    }
+
+    footer {
+        padding: 0px 20px;
+    }
+
+    .bar-title {
+        font-size: 1.5rem;
+    }
+
+    .bar-link {
+        display: none;
+    }
+
+    .menu-opener {
+        display: inline;
     }
 }
 

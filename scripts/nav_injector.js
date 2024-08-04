@@ -1,6 +1,12 @@
 
 function getNavbarHtml(relPrefix) {
     return `
+        <div class="bar-container menu-opener">
+            <a class="bar-link">
+                <i class="nf nf-md-menu"></i>
+            </a>
+        </div>
+
         <div class="bar-container">
             <h1 class="bar-title"><a href="${relPrefix}">not-phoeniix</a></h1>
             <a class="bar-link" href="${relPrefix}about_me.html">About Me</a>
@@ -29,9 +35,11 @@ function getNavbarHtml(relPrefix) {
 
 function getFooterHtml() {
     return `
-        <p>wow a footer!</p>
-        <p>coded with love &lt;3</p>
-        <p><a href="https://github.com/not-phoeniix/not-phoeniix.github.io" target="_blank">source</a></p>
+        <div class="footer-links">
+            <p>wow a footer!</p>
+            <p>coded with love &lt;3</p>
+            <p><a href="https://github.com/not-phoeniix/not-phoeniix.github.io" target="_blank">source</a></p>
+        </div>
     `;
 }
 
