@@ -15,7 +15,7 @@
     --color-navbar-bg: #181a26;
     --color-navbar-main: #e1e5f2;
 
-    --scroll-duration: 20s;
+    --scroll-duration: 60s;
     --scroll-item-width: 100px;
 }
 
@@ -36,7 +36,7 @@ h3 {
 html {
     background-color: var(--color-bg);
     background-image: url(../media/bg_dark.png);
-    background-size: 300px;
+    background-size: 400px;
 }
 
 body {
@@ -50,6 +50,7 @@ main {
     max-width: 800px;
     margin: 0 auto;
     padding: 5px 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
@@ -105,6 +106,9 @@ a {
     position: sticky;
     top: 0;
     padding: 0px 20px;
+
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .bar-container {
@@ -124,6 +128,8 @@ a {
 
     padding-top: 3px;
     margin: 0 20px;
+
+    cursor: pointer;
 
     &:link {
         color: var(--color-navbar-main);
@@ -152,24 +158,43 @@ a {
     font-size: 0;
     position: relative;
 
-    & .scroll-item {
+    & > * {
         position: relative;
         top: 0%;
         left: 0px;
-        width: 100px;
         animation: scroll-item var(--scroll-duration) linear infinite;
         margin: 0;
         padding: 0;
     }
 }
 
-@keyframes scroll-item {
+.adumbration-scroller > * {
+    height: 250px;
+    animation: scroll-adumbration var(--scroll-duration) linear infinite
+}
+
+.watchfaces-scroller > * {
+    width: 100px;
+    animation: scroll-watchfaces var(--scroll-duration) linear infinite;
+}
+
+@keyframes scroll-watchfaces {
     from {
-        left: -1500px;
+        left: 0px;
     }
 
     to {
+        left: -1500px;
+    }
+}
+
+@keyframes scroll-adumbration {
+    from {
         left: 0px;
+    }
+
+    to {
+        left: -1130px;
     }
 }
 
