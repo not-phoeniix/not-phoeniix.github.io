@@ -116,7 +116,7 @@ a {
     display: flex;
     margin: 0px 5px;
 
-    h1 {
+    & h1 {
         margin-right: 20px;
     }
 }
@@ -125,6 +125,7 @@ a {
     color: var(--color-navbar-main);
     font-size: 1.3em;
     text-decoration: none;
+    cursor: pointer;
 
     padding-top: 3px;
     margin: 0 20px;
@@ -149,6 +150,23 @@ a {
 
     &:active {
         color: var(--color-accent-secondary);
+    }
+}
+
+.grid-collage {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+
+    & img {
+        width: 100%;
+    }
+
+    & .house-build {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+        margin: 0 auto;
+        object-fit: cover;
     }
 }
 
