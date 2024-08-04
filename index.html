@@ -4,141 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>not-phoeniix</title>
+    <title>Nikki Portfolio</title>
     <link rel="stylesheet" href="styles/style.css">
 
     <!-- scripts :D -->
+    <script src="scripts/nav_injector.js"></script>
     <script src="scripts/theme.js"></script>
 </head>
 
 <body>
-    <header class="navbar">
-        <div class="bar-container">
-            <h1>not-phoeniix</h1>
-            <a class="bar-link" href="#about_me">About Me</a>
-            <a class="bar-link" href="#projects">Projects</a>
-        </div>
-
-        <div class="bar-container">
-            <a class="bar-link" href="https://github.com/not-phoeniix" target="_blank">
-                <i class="nf nf-fa-github"></i>
-            </a>
-
-            <a class="bar-link" id="theme_switch">
-                <i class="nf nf-oct-sun"></i>
-            </a>
-        </div>
-    </header>
+    <header class="navbar" data-rel-to-root=""></header>
 
     <main>
-        <h2 id="about_me">About Me</h2>
-
-        <p>
-            Hi, I'm Nikki! I'm a second year Game Design and Development major
-            and the Rochester Institute of Technology. I'm a huge coding nerd,
-            and I love all things open source and hackable.
-        </p>
-
-        <p>
-            My pronouns are she/they, and my favorite flavor of autism is linux
-            customization/personalization :D (low level programming languages
-            take a close second place)
-        </p>
-
-        <h2 id="projects">Projects</h2>
-
-        <h3>Goober Game</h3>
-
-        <p>A 2D space exploration adventure game.</p>
-        <p>Goober Game is my biggest passion project. I've been working on it for over a year at this point, and it's
-            making steady progress. "Goober Game" is the working title, I don't have a finalized name yet.</p>
-
-        <div class="grid-collage">
-            <img src="media/goober_game/null_idle.gif" alt="Pixel art robot, idle standing animation">
-            <img src="media/goober_game/null_walk.gif" alt="Pixel art robot, walking to the right animation">
-            <img src="media/goober_game/gameplay_housebuild.png"
-                alt="Game screenshot of house, heart, and smiley faces built in blocks" class="house-build">
-        </div>
-        `
-        <ul>
-            <li>2D space exploration survival game</li>
-            <li>Solo project</li>
-            <li>Custom engine made by me</li>
-            <li>Homemade and freshly baked pixel art</li>
-        </ul>
-
-        <p>Learn more <a href="projects/goober.html">here</a> !!</p>
-
-        <h3>Adumbration</h3>
-        <div class="horiz-scroller adumbration-scroller">
-            <!-- <img src="media/adumbration/gameplay.gif" -->
-                <!-- alt="A small ghost character moving across a room with dynamic lights"> -->
-            <img src="media/adumbration/screenshot1.png" alt="">
-            <img src="media/adumbration/screenshot2.png" alt="">
-
-            <!-- secondary elements used for duplicate scrolling -->
-
-            <!-- <img src="media/adumbration/gameplay.gif"
-                alt="A small ghost character moving across a room with dynamic lights"> -->
-            <img src="media/adumbration/screenshot1.png" alt="">
-            <img src="media/adumbration/screenshot2.png" alt="">
-        </div>
-
-        <p>
-            A game project with 3 peers in the course IGME 106 at RIT. You can
-            find more info <a href="projects/adumbration.html">here</a> !!
-        </p>
-
-        <h3>Watchfaces</h3>
-
-        <div class="horiz-scroller watchfaces-scroller">
-            <img src="media/watchfaces/pixel_1.png" alt="Pixel 1">
-            <img src="media/watchfaces/pixel_2.png" alt="Pixel 2">
-            <img src="media/watchfaces/pixel_3.png" alt="Pixel 3">
-            <img src="media/watchfaces/pixel_4.png" alt="Pixel 4">
-            <img src="media/watchfaces/slash_1.png" alt="Slash 1">
-            <img src="media/watchfaces/slash_2.png" alt="Slash 2">
-            <img src="media/watchfaces/slash_3.png" alt="Slash 3">
-            <img src="media/watchfaces/tictocplus_1.png" alt="TicToc+ 1">
-            <img src="media/watchfaces/tictocplus_2.png" alt="TicToc+ 2">
-            <img src="media/watchfaces/tictocplus_3.png" alt="TicToc+ 3">
-            <img src="media/watchfaces/pridetime_1.png" alt="Pride Time 1">
-            <img src="media/watchfaces/pridetime_2.png" alt="Pride Time 2">
-            <img src="media/watchfaces/pridetime_3.png" alt="Pride Time 3">
-            <img src="media/watchfaces/pridetime_4.png" alt="Pride Time 4">
-            <img src="media/watchfaces/pridetime_5.png" alt="Pride Time 5">
-
-            <!-- secondary elements used for duplicate scrolling -->
-
-            <img src="media/watchfaces/pixel_1.png" alt="Pixel 1">
-            <img src="media/watchfaces/pixel_2.png" alt="Pixel 2">
-            <img src="media/watchfaces/pixel_3.png" alt="Pixel 3">
-            <img src="media/watchfaces/pixel_4.png" alt="Pixel 4">
-            <img src="media/watchfaces/slash_1.png" alt="Slash 1">
-            <img src="media/watchfaces/slash_2.png" alt="Slash 2">
-            <img src="media/watchfaces/slash_3.png" alt="Slash 3">
-            <img src="media/watchfaces/tictocplus_1.png" alt="TicToc+ 1">
-            <img src="media/watchfaces/tictocplus_2.png" alt="TicToc+ 2">
-            <img src="media/watchfaces/tictocplus_3.png" alt="TicToc+ 3">
-            <img src="media/watchfaces/pridetime_1.png" alt="Pride Time 1">
-            <img src="media/watchfaces/pridetime_2.png" alt="Pride Time 2">
-            <img src="media/watchfaces/pridetime_3.png" alt="Pride Time 3">
-            <img src="media/watchfaces/pridetime_4.png" alt="Pride Time 4">
-            <img src="media/watchfaces/pridetime_5.png" alt="Pride Time 5">
-        </div>
-
-        <p>
-            Over the course of high school, I spent a bit of my free time
-            learning the C programming language by coding watchfaces for the
-            Pebble smartwatch platform! The Pebble (now "Rebble") community
-            is an active and tightly-knit collection of passionate people
-            trying to keep the idea of the Pebble platform alive through crowd
-            funding and open source software, several years after the original
-            company went under and was bought by Fitbit. You can find more info
-            <a href="projects/watchfaces.html">here</a> !!
-        </p>
-
+        <section class="center-content">
+            <h1>Nikki's Portfolio</h1>
+            <p>welcome welcome !! :D</p>
+            <p>it's great to have ya :]</p>
+        </section>
     </main>
+    
+    <footer></footer>
+
 </body>
 
 </html>

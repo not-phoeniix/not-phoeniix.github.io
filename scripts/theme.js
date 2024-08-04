@@ -18,10 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
     switchButton = document.querySelector("#theme_switch");
     switchIcon = switchButton.querySelector("i");
     switchButton.addEventListener("click", switchTheme);
-    bgElement = document.querySelector("html");
+    bgElement = document.querySelector("main");
 
     let storageValue = localStorage.getItem("enableLightMode");
-    isLightMode = storageValue == "true" ? true : false;
+    isLightMode = storageValue == "true" || false;
 
     setTheme(isLightMode);
 });

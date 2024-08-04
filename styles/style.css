@@ -29,14 +29,13 @@ h1,
 h2,
 h3 {
     font-family: "Roboto Mono";
+    clear: both;
 }
 
 /* #region general tag theming */
 
 html {
     background-color: var(--color-bg);
-    background-image: url(../media/bg_dark.png);
-    background-size: 400px;
 }
 
 body {
@@ -45,12 +44,9 @@ body {
 }
 
 main {
-    background-color: var(--color-bg);
-    width: 80%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 5px 30px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-image: url(../media/bg_dark.png);
+    background-size: 400px;
+    padding-bottom: 50px;
 }
 
 h1 {
@@ -79,10 +75,7 @@ a {
         color: var(--color-accent-secondary);
     }
 
-    &:focus {
-        color: var(--color-main-secondary);
-    }
-
+    &:focus,
     &:hover {
         color: var(--color-main-secondary);
     }
@@ -92,9 +85,30 @@ a {
     }
 }
 
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0px 20px;
+    background-color: var(--color-bg);
+    height: 100%;
+
+    box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.05);
+}
+
 /* #endregion */
 
 /* #region class theming */
+
+.center-content {
+    background-color: var(--color-bg);
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 5px 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
 
 .navbar {
     background-color: var(--color-navbar-bg);
@@ -132,18 +146,12 @@ a {
 
     cursor: pointer;
 
-    &:link {
-        color: var(--color-navbar-main);
-    }
-
+    &:link,
     &:visited {
         color: var(--color-navbar-main);
     }
 
-    &:focus {
-        color: var(--color-accent);
-    }
-
+    &:focus,
     &:hover {
         color: var(--color-accent);
     }
@@ -151,6 +159,63 @@ a {
     &:active {
         color: var(--color-accent-secondary);
     }
+}
+
+.bar-title a {
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+        color: var(--color-accent);
+    }
+
+    &:focus,
+    &:hover {
+        color: var(--color-navbar-main);
+    }
+
+    &:active {
+        color: var(--color-accent-secondary);
+    }
+}
+
+.dropdown {
+    & .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--color-navbar-bg);
+        z-index: 2;
+
+        & a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+    }
+
+    &:hover .dropdown-content {
+        display: block;
+    }
+}
+
+.float {
+    width: 180px;
+    height: 140px;
+
+    object-fit: cover;
+    object-position: 50% 100%;
+
+    &.right {
+        float: right;
+    }
+
+    &.left {
+        float: left;
+    }
+}
+
+.fliph {
+    transform: scaleX(-1);
 }
 
 .grid-collage {
@@ -184,11 +249,6 @@ a {
         margin: 0;
         padding: 0;
     }
-}
-
-.adumbration-scroller > * {
-    height: 250px;
-    animation: scroll-adumbration var(--scroll-duration) linear infinite
 }
 
 .watchfaces-scroller > * {
