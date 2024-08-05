@@ -135,6 +135,26 @@ a {
     }
 }
 
+.path-indicator {
+    font-size: 0.9rem;
+    padding: 10px;
+
+    & a {
+        text-decoration: none;
+
+        &:visited,
+        &:link {
+            color: var(--color-accent);
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: var(--color-accent-secondary);
+        }
+    }
+}
+
 /* #endregion */
 
 /* #region footer */
