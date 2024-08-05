@@ -1,0 +1,42 @@
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 30px;
+
+    & h1 {
+        font-size: 4rem;
+    }
+}
+
+.horiz-buttons {
+    display: flex;
+    gap: 10px;
+
+    & a {
+        background-color: var(--color-bg-secondary);
+        color: var(--color-main);
+        padding: 10px;
+        text-decoration: none;
+        transition: 0.1s;
+
+        &:focus,
+        &:hover {
+            background-color: var(--color-accent);
+            color: var(--color-navbar-main);
+        }
+
+
+        &:active {
+            background-color: var(--color-main);
+        }
+    }
+}
+
+.light {
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: var(--color-main-secondary);
+}

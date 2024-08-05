@@ -45,6 +45,8 @@ main {
     background-image: url(../media/bg_dark.png);
     background-size: 400px;
     padding-bottom: 50px;
+
+    min-height: 68vh;
 }
 
 h1 {
@@ -187,6 +189,7 @@ footer {
     font-size: 1.3em;
     text-decoration: none;
     cursor: pointer;
+    transition: 0.1s;
 
     padding-top: 3px;
     margin: 0 20px;
@@ -210,6 +213,7 @@ footer {
 
 .bar-title a {
     text-decoration: none;
+    transition: 0.1s;
 
     &:link,
     &:visited {
@@ -218,7 +222,7 @@ footer {
 
     &:focus,
     &:hover {
-        color: var(--color-navbar-main);
+        color: var(--color-accent-secondary);
     }
 
     &:active {
