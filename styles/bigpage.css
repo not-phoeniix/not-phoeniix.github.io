@@ -43,3 +43,52 @@
         }
     }
 }
+
+.proj-showcase {
+    display: block;
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+
+    background-size: 100%;
+    background-color: #00000088;
+    background-blend-mode: multiply;
+    background-position-y: 50%;
+    background-position-x: 50%;
+
+    text-decoration: none;
+
+    & .proj-title {
+        font-weight: bold;
+        font-size: 2em;
+        color: var(--color-navbar-main);
+        transition: 0.1s;
+    }
+    
+    & .proj-subtitle {
+        font-size: 1.2em;
+        color: var(--color-navbar-main);
+    }
+
+    &:hover {
+        background-color: #000000bb;
+        background-size: 110%;
+
+        & .proj-title {
+            color: var(--color-accent);
+        }
+    }
+}
+
+.goober-game {
+    background-image: url("../media/goober_game/icon.png");
+}
+
+.adumbration {
+    background-image: url("../media/adumbration/gameplay.gif");
+}
