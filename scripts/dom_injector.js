@@ -51,7 +51,7 @@ function toggleSideNav() {
     const links = document.querySelectorAll(":not(.menu-opener).bar-link");
 
     if (navOpen) {
-        menuOpener.innerHTML = `<i class="nf nf-oct-x"></i>`;
+        menuOpener.innerHTML = `<i class="nf nf-cod-close"></i>`;
         for (let link of links) {
             link.style.display = "inline";
         }
