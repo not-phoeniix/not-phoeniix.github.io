@@ -12,10 +12,10 @@ function getNavbarHtml(relPrefix) {
             <div class="dropdown">
                 <a class="bar-link" href="javascript:void(0)">Projects <i class="nf nf-fa-angle_down"></i></a>
                 <div class="dropdown-content">
-                    <a href="${relPrefix}projects/goober_game.html">Goober Game</a>
-                    <a href="${relPrefix}projects/watchfaces.html">Watchfaces</a>
-                    <a href="${relPrefix}projects/changeling.html">Changeling</a>
-                    <a href="${relPrefix}projects/adumbration.html">Adumbration</a>
+                    <a href="${relPrefix}goober_game.html">Goober Game</a>
+                    <a href="${relPrefix}watchfaces.html">Watchfaces</a>
+                    <a href="${relPrefix}changeling.html">Changeling</a>
+                    <a href="${relPrefix}adumbration.html">Adumbration</a>
                 </div>
             </div>
 
