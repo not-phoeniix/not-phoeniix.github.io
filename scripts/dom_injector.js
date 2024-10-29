@@ -10,7 +10,7 @@ function getNavbarHtml(relPrefix) {
             <a class="bar-link" href="${relPrefix}about_me.html">About Me</a>
 
             <div class="dropdown">
-                <a class="bar-link" href="${relPrefix}projects/">Projects</a>
+                <a class="bar-link" href="javascript:void(0)">Projects <i class="nf nf-fa-angle_down"></i></a>
                 <div class="dropdown-content">
                     <a href="${relPrefix}projects/goober_game.html">Goober Game</a>
                     <a href="${relPrefix}projects/watchfaces.html">Watchfaces</a>
@@ -43,23 +43,48 @@ function getFooterHtml() {
 }
 
 let navOpen = false;
+let timeoutId = 0;
+
+function closeSideNav(menuOpener, links, navbar) {
+    // cancel any previous timers if they exist
+    clearTimeout(timeoutId);
+
+    menuOpener.innerHTML = `<i class="nf nf-md-menu"></i>`;
+    for (let link of links) {
+        link.style.display = "none";
+    }
+
+    navbar.style.paddingBottom = "0px";
+
+    navOpen = false;
+}
+
+function openSideNav(menuOpener, links, navbar) {
+    menuOpener.innerHTML = `<i class="nf nf-cod-close"></i>`;
+    for (let link of links) {
+        link.style.display = "inline";
+    }
+
+    navbar.style.paddingBottom = "20px";
+
+    navOpen = true;
+
+    // in 5 seconds, close the navigation
+    timeoutId = setTimeout(() => {
+        closeSideNav(menuOpener, links);
+        timeoutId = 0;
+    }, 5000);
+}
 
 function toggleSideNav() {
-    navOpen = !navOpen;
-
     const menuOpener = document.querySelector(".menu-opener");
     const links = document.querySelectorAll(":not(.menu-opener).bar-link");
+    const navbar = document.querySelector(".navbar");
 
     if (navOpen) {
-        menuOpener.innerHTML = `<i class="nf nf-cod-close"></i>`;
-        for (let link of links) {
-            link.style.display = "inline";
-        }
+        closeSideNav(menuOpener, links, navbar);
     } else {
-        menuOpener.innerHTML = `<i class="nf nf-md-menu"></i>`;
-        for (let link of links) {
-            link.style.display = "none";
-        }
+        openSideNav(menuOpener, links, navbar)
     }
 }
 
