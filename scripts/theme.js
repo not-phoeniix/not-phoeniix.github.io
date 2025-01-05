@@ -8,7 +8,7 @@ let color6 = "#f21b54";
 let bgDarkPath = "../media/bg_dark.png";
 let bgLightPath = "../media/bg_light.png";
 
-let isLightMode = false;
+let isLightMode = true;
 
 let switchButton;
 let switchIcon;
@@ -20,8 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
     switchButton.addEventListener("click", switchTheme);
     bgElement = document.querySelector("main");
 
-    let storageValue = localStorage.getItem("enableLightMode");
-    isLightMode = storageValue == "true" || false;
+    const storageValue = localStorage.getItem("enableLightMode");
+    if (storageValue) {
+        isLightMode = storageValue === "true";
+    }
 
     setTheme(isLightMode);
 });
