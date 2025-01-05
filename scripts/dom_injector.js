@@ -9,13 +9,17 @@ function getNavbarHtml(relPrefix) {
 
             <a class="bar-link" href="${relPrefix}about_me.html">About Me</a>
 
+            <a class="bar-link" href="${relPrefix}resume.html">Resume</a>
+
             <div class="dropdown">
                 <a class="bar-link" href="javascript:void(0)">Projects <i class="nf nf-fa-angle_down"></i></a>
                 <div class="dropdown-content">
-                    <a href="${relPrefix}goober_game.html">Goober Game</a>
+                    <a href="${relPrefix}nullspace.html">Nullspace</a>
+                    <a href="${relPrefix}desktop.html">Linux Desktop</a>
                     <a href="${relPrefix}watchfaces.html">Watchfaces</a>
                     <a href="${relPrefix}changeling.html">Changeling</a>
                     <a href="${relPrefix}adumbration.html">Adumbration</a>
+                    <a href="${relPrefix}quoth_the_raven.html">Quoth the Raven</a>
                 </div>
             </div>
 
@@ -24,6 +28,10 @@ function getNavbarHtml(relPrefix) {
         <div class="bar-container">
             <a class="bar-link" href="https://github.com/not-phoeniix" target="_blank">
                 <i class="nf nf-fa-github"></i>
+            </a>
+
+            <a class="bar-link" href="https://www.linkedin.com/in/nmurello/" target="_blank">
+                <i class="nf nf-dev-linkedin"></i>
             </a>
 
             <a class="bar-link" id="theme_switch">

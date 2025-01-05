@@ -2,6 +2,10 @@
     padding: 0px;
 }
 
+p {
+    padding: 0px 10px;
+}
+
 .flex-content {
     display: flex;
     justify-content: center;
