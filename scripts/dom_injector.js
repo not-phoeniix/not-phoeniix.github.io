@@ -9,7 +9,7 @@ function getNavbarHtml(relPrefix) {
 
             <a class="bar-link" href="${relPrefix}about_me.html">About Me</a>
 
-            <a class="bar-link" href="${relPrefix}resume.html">Resume</a>
+            <a class="bar-link" href="${relPrefix}media/resume.pdf" target="_blank">Resume</a>
 
             <div class="dropdown">
                 <a class="bar-link" href="javascript:void(0)">Projects <i class="nf nf-fa-angle_down"></i></a>
