@@ -25,7 +25,7 @@
 
             <h2>About</h2>
             <p>
-                Nullspace is a passion project that has spanned over a year's
+                Nullspace is a passion project that has spanned over two year's
                 worth of work. It's a 2D space exploration survival game set in
                 a small solar system comprised of a few planets of differing
                 environments and climates. It is far from complete, but it is the
@@ -36,18 +36,25 @@
             <h2>The Tech</h2>
 
             <p>
-                Nullspace has been a massive undertaking technically. The
-                massive scope certainly doesn't help my case as a solo developer.
-                This game runs in a custom engine designed by myself, which is
-                detailed below.
+                Nullspace has been a massive undertaking technically.
+                This game began development in early 2023 and developed into what
+                would become the <a href="sprks_engine.html">Sprks Engine</a>. It
+                contains a general scene-actor system with an entity-component
+                architecture, along with dynamic spatial partitioning to support
+                the updating and rendering of such a large proc-gen world.
             </p>
 
             <p>
-                The engine I've been building for this project is based on the
-                MonoGame framework. It utilizes C# across its entire codebase,
-                which is rapidly growing each day. There are also other languages
-                utilized, such as JSON files for game config data importing/saving,
-                and shader effect code written in HLSL.
+                I built the codebase for this game with the intention of being robust.
+                This allowed the transition to the Sprks Engine to be relatively smooth,
+                as many systems could be directly ported over.
+            </p>
+
+            <p>
+                This project also utilizes a custom deferred rendering system for
+                interesting 2D dynamic lighting. Shadows are cast using a screenspace
+                ray marching shader and hundreds of scene lights can be rendered at
+                once due to the nature of a deferred rendering system.
             </p>
 
             <h2>The Art</h2>
@@ -70,10 +77,14 @@
 
             <h2>Gallery</h2>
 
-            <div class="img_showcase">
-                <img src="../media/goober_game/gameplay_spawnforest.png"
+            <div class="img-showcase">
+                <img src="media/goober_game/gamplay_idle_standing.png"
                     alt="A small robot standing in the middle of a large forest in-game">
-                <img src="../media/goober_game/null_idle.gif" alt="Animated robot bouncing up and down idly">
+                <img src="media/goober_game/flashlight.png" alt="A player flashlight casting shadows on trees">
+                <img src="media/goober_game/spline_idle.gif" alt="A spider-like creature twitching">
+                <img src="media/goober_game/spline_walk.gif" alt="A spider-like creature running">
+                <img src="media/goober_game/cave_lighting.png"
+                    alt="A cave with floating lights shining in the darkness">
             </div>
 
         </section>

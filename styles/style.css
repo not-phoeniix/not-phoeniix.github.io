@@ -93,7 +93,7 @@ a {
 .center-content {
     background-color: var(--color-bg);
     width: 80%;
-    max-width: 50rem;
+    max-width: 45rem;
     margin: 0 auto;
     padding: 5px 30px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -160,6 +160,17 @@ a {
         &:hover {
             color: var(--color-accent-secondary);
         }
+    }
+}
+
+.img-showcase {
+    display: flex;
+    overflow-x: auto;
+    height: 300px;
+
+    & > img {
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 
