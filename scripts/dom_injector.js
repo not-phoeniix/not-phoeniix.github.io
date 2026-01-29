@@ -43,12 +43,16 @@ function getNavbarHtml(relPrefix) {
 function getFooterHtml() {
     return `
         <div class="footer-links">
-            <nav class="links">
+            <div class="links">
                 <p><a href="https://not-phoeniix.github.io/">Home</a></p>
                 <p><a href="https://github.com/not-phoeniix">GitHub</a></p>
-                <p><a href="https://github.com/not-phoeniix/not-phoeniix.github.io" target="_blank">Source code</a></p>
-            </nav>
-            <p>Coded by Nikki Murello :]</p>
+                <p><a href="mailto:nmurello15@gmail.com" target="_blank">Contact</a></p>
+            </div>
+            
+            <div class="links">
+                <p>Coded by Nikki Murello :]</p>
+                <p><a href="https://github.com/not-phoeniix/not-phoeniix.github.io" target="_blank">Source</a></p>
+            </div>
         </div>
     `;
 }
