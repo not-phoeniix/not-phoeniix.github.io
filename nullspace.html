@@ -5,23 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nullspace</title>
-    <link rel="stylesheet" href="../styles/style.css">
-    <script src="../scripts/dom_injector.js"></script>
-    <script src="../scripts/theme.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/dom_injector.js"></script>
+    <script src="scripts/theme.js"></script>
+    <script src="scripts/click_zoom.js"></script>
 </head>
 
 <body>
-    <header class="navbar" data-rel-to-root="../"></header>
+    <header class="navbar"></header>
 
     <main>
         <section class="center-content">
             <nav class="path-indicator">[
-                <a href="../">home</a> /
+                <a href=".">home</a> /
                 nullspace
                 ]
             </nav>
 
             <h1>Nullspace</h1>
+
+            <p><a href="https://not-phoeniix.itch.io/nullspace" target="_blank">itch.io listing (beta)</a></p>
 
             <h2>About</h2>
             <p>
@@ -78,12 +81,16 @@
             <h2>Gallery</h2>
 
             <div class="img-showcase">
-                <img src="media/goober_game/gamplay_idle_standing.png"
+                <div class="zoom-bg"></div>
+                <img class="click-zoomable" src="media/goober_game/gamplay_idle_standing.png"
                     alt="A small robot standing in the middle of a large forest in-game">
-                <img src="media/goober_game/flashlight.png" alt="A player flashlight casting shadows on trees">
-                <img src="media/goober_game/spline_idle.gif" alt="A spider-like creature twitching">
-                <img src="media/goober_game/spline_walk.gif" alt="A spider-like creature running">
-                <img src="media/goober_game/cave_lighting.png"
+                <img class="click-zoomable" src="media/goober_game/flashlight.png"
+                    alt="A player flashlight casting shadows on trees">
+                <img class="click-zoomable" src="media/goober_game/spline_idle.gif"
+                    alt="A spider-like creature twitching">
+                <img class="click-zoomable" src="media/goober_game/spline_walk.gif"
+                    alt="A spider-like creature running">
+                <img class="click-zoomable" src="media/goober_game/cave_lighting.png"
                     alt="A cave with floating lights shining in the darkness">
             </div>
 

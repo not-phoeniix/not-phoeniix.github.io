@@ -9,17 +9,15 @@ function getNavbarHtml(relPrefix) {
 
             <a class="bar-link" href="${relPrefix}about_me.html">About Me</a>
 
-            <a class="bar-link" href="${relPrefix}media/resume.pdf" target="_blank">Resume</a>
-
             <div class="dropdown">
                 <a class="bar-link" href="javascript:void(0)">Projects <i class="nf nf-fa-angle_down"></i></a>
                 <div class="dropdown-content">
                     <a href="${relPrefix}sprks_engine.html">Sprks Engine</a>
+                    <a href="${relPrefix}skinneret.html">SKINNERET</a>
                     <a href="${relPrefix}nullspace.html">Nullspace</a>
                     <a href="${relPrefix}skip_loop_process.html">SKIP_LOOP_PROCESS</a>
+                    <a href="${relPrefix}changeling.html">Changeling VR</a>
                     <a href="${relPrefix}watchfaces.html">Watchfaces</a>
-                    <a href="${relPrefix}changeling.html">Changeling</a>
-                    <a href="${relPrefix}adumbration.html">Adumbration</a>
                     <a href="${relPrefix}desktop.html">Linux Deskstop</a>
                 </div>
             </div>
@@ -45,8 +43,12 @@ function getNavbarHtml(relPrefix) {
 function getFooterHtml() {
     return `
         <div class="footer-links">
+            <nav class="links">
+                <p><a href="https://not-phoeniix.github.io/">Home</a></p>
+                <p><a href="https://github.com/not-phoeniix">GitHub</a></p>
+                <p><a href="https://github.com/not-phoeniix/not-phoeniix.github.io" target="_blank">Source code</a></p>
+            </nav>
             <p>Coded by Nikki Murello :]</p>
-            <p><a href="https://github.com/not-phoeniix/not-phoeniix.github.io" target="_blank">Source code</a></p>
         </div>
     `;
 }

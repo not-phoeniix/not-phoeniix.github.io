@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adumbration</title>
-    <link rel="stylesheet" href="../styles/style.css">
-
-    <script src="../scripts/dom_injector.js"></script>
-    <script src="../scripts/theme.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/dom_injector.js"></script>
+    <script src="scripts/theme.js"></script>
+    <script src="scripts/click_zoom.js"></script>
 </head>
 
 <body>
-    <header class="navbar" data-rel-to-root="../"></header>
+    <header class="navbar"></header>
 
     <main>
         <section class="center-content">
             <nav class="path-indicator">[
-                <a href="../">home</a> /
+                <a href=".">home</a> /
                 adumbration
                 ]
             </nav>
@@ -45,9 +45,10 @@
             <h2>Gallery</h2>
 
             <div class="img-showcase">
-                <img src="media/adumbration/gameplay.gif" alt="">
-                <img src="media/adumbration/screenshot1.png" alt="">
-                <img src="media/adumbration/screenshot2.png" alt="">
+                <div class="zoom-bg"></div>
+                <img class="click-zoomable" src="media/adumbration/gameplay.gif" alt="">
+                <img class="click-zoomable" src="media/adumbration/screenshot1.png" alt="">
+                <img class="click-zoomable" src="media/adumbration/screenshot2.png" alt="">
             </div>
 
         </section>

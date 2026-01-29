@@ -1,12 +1,12 @@
-let color0 = "#05070d";
-let color1 = "#181a26";
-let color2 = "#353a4d";
-let color3 = "#a7aecc";
-let color4 = "#e1e5f2";
-let color5 = "#a60731";
-let color6 = "#f21b54";
-let bgDarkPath = "../media/bg_dark.png";
-let bgLightPath = "../media/bg_light.png";
+const color0 = "#05070d";
+const color1 = "#181a26";
+const color2 = "#353a4d";
+const color3 = "#a7aecc";
+const color4 = "#e1e5f2";
+const color5 = "#a60731";
+const color6 = "#f21b54";
+const bgDarkPath = "../media/bg_dark.png";
+const bgLightPath = "../media/bg_light.png";
 
 let isLightMode = true;
 

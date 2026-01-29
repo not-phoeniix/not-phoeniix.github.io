@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sprks Engine</title>
-    <link rel="stylesheet" href="../styles/style.css">
-    <script src="../scripts/dom_injector.js"></script>
-    <script src="../scripts/theme.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/dom_injector.js"></script>
+    <script src="scripts/theme.js"></script>
+    <script src="scripts/click_zoom.js"></script>
 </head>
 
 <body>
-    <header class="navbar" data-rel-to-root="../"></header>
+    <header class="navbar"></header>
 
     <main>
         <section class="center-content">
             <nav class="path-indicator">[
-                <a href="../">home</a> /
+                <a href=".">home</a> /
                 sprks_engine
                 ]
             </nav>
@@ -89,11 +90,15 @@
             <h2>Gallery</h2>
 
             <div class="img-showcase">
-                <img src="media/sprks_engine/2d_lighting.png" alt="A 2D tilemap with multiple lights shining">
-                <img src="media/sprks_engine/boids.png" alt="A swarm of simulated boids">
-                <img src="media/goober_game/flashlight.png" alt="A small robot shining a flashlight">
-                <img src="media/skip_loop/gameplay2.png" alt="An image of a platformer with two players racing">
-                <img src="media/sprks_engine/3d_test.png" alt="Several low-res 3D shapes">
+                <div class="zoom-bg"></div>
+                <img class="click-zoomable" src="media/sprks_engine/2d_lighting.png"
+                    alt="A 2D tilemap with multiple lights shining">
+                <img class="click-zoomable" src="media/sprks_engine/boids.png" alt="A swarm of simulated boids">
+                <img class="click-zoomable" src="media/goober_game/flashlight.png"
+                    alt="A small robot shining a flashlight">
+                <img class="click-zoomable" src="media/skip_loop/gameplay2.png"
+                    alt="An image of a platformer with two players racing">
+                <img class="click-zoomable" src="media/sprks_engine/3d_test.png" alt="Several low-res 3D shapes">
             </div>
 
         </section>

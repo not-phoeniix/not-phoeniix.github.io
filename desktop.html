@@ -5,27 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linux Desktop</title>
-    <link rel="stylesheet" href="../styles/style.css">
-    <script src="../scripts/dom_injector.js"></script>
-    <script src="../scripts/theme.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/dom_injector.js"></script>
+    <script src="scripts/theme.js"></script>
+    <script src="scripts/click_zoom.js"></script>
 </head>
 
 <body>
-    <header class="navbar" data-rel-to-root="../"></header>
+    <header class="navbar"></header>
 
     <main>
         <section class="center-content">
             <nav class="path-indicator">[
-                <a href="../">home</a> /
+                <a href=".">home</a> /
                 desktop
                 ]
             </nav>
 
             <h1>Linux Desktop</h1>
 
+            <p><a href="https://github.com/not-phoeniix/.dotfiles" target="_blank">Source Code</a></p>
+
             <h2>About</h2>
 
+            <p>
+                My Linux desktop is a project I've worked on over the
+                course of a few years. The project consists of a handful
+                of config files for various programs, a few handmade shell
+                scripts for automation, and an interactive desktop UI
+                that is built on top of an open source framework called
+                <a href="https://aylur.github.io/astal/" target="_blank">Astal</a>.
+            </p>
+
+            <p>
+                This project is the desktop UI that I use every single
+                day on my personal computers. I've built it to be functional,
+                efficient, and lightweight. It's changed over the years, swapping
+                between frameworks, program combinations, and window managers.
+            </p>
+
+            <h3>Skills Used</h3>
+            <ul>
+                <li>TypeScript & TSX</li>
+                <li>React-like syntax/logic</li>
+            </ul>
+
             <h2>Gallery</h2>
+
+            <div class="img-showcase">
+                <div class="zoom-bg"></div>
+                <img class="click-zoomable" src="media/desktop/empty.png">
+                <img class="click-zoomable" src="media/desktop/programs.png">
+                <img class="click-zoomable" src="media/desktop/launcher.png">
+                <img class="click-zoomable" src="media/desktop/status_menu.png">
+            </div>
 
         </section>
     </main>

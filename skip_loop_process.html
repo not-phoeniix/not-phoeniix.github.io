@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SKIP_LOOP_PROCESS</title>
-    <link rel="stylesheet" href="../styles/style.css">
-    <script src="../scripts/dom_injector.js"></script>
-    <script src="../scripts/theme.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/dom_injector.js"></script>
+    <script src="scripts/theme.js"></script>
+    <script src="scripts/click_zoom.js"></script>
 </head>
 
 <body>
-    <header class="navbar" data-rel-to-root="../"></header>
+    <header class="navbar"></header>
 
     <main>
         <section class="center-content">
             <nav class="path-indicator">[
-                <a href="../">home</a> /
+                <a href=".">home</a> /
                 skip_loop_process
                 ]
             </nav>
@@ -59,10 +60,11 @@
             <h2>Gallery</h2>
 
             <div class="img-showcase">
-                <img src="media/skip_loop/title.png" alt="">
-                <img src="media/skip_loop/grapple.png" alt="">
-                <img src="media/skip_loop/gameplay0.png" alt="">
-                <img src="media/skip_loop/gameplay2.png" alt="">
+                <div class="zoom-bg"></div>
+                <img class="click-zoomable" src="media/skip_loop/title.png" alt="">
+                <img class="click-zoomable" src="media/skip_loop/grapple.png" alt="">
+                <img class="click-zoomable" src="media/skip_loop/gameplay0.png" alt="">
+                <img class="click-zoomable" src="media/skip_loop/gameplay2.png" alt="">
             </div>
 
         </section>
