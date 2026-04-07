@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boids_vk</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/dom_injector.js"></script>
+    <script src="scripts/theme.js"></script>
+    <script src="scripts/click_zoom.js"></script>
+</head>
+
+<body>
+    <header class="navbar"></header>
+
+    <main>
+        <section class="center-content">
+            <nav class="path-indicator">[
+                <a href=".">home</a> /
+                boids_vk
+                ]
+            </nav>
+
+            <h1>boids_vk</h1>
+
+            <p><a href="https://github.com/not-phoeniix/boids_vk" target="_blank">Source Code</a></p>
+
+            <h2>About</h2>
+
+            <p>
+                <b>boids_vk</b> is a real-time simulation of 10,000 dynamically
+                flocking autonomous agents. The simulation code is written in C++
+                on the CPU and utilizes data-oriented design patterns and a thread
+                pool for efficient parallel processing. The simulation is rendered in
+                Vulkan using instanced rendering. Put simply, this thing runs <em>fast</em>.
+                I can maintain simulation time of 20-25ms when run on my laptop.
+            </p>
+
+            <p>
+                This is a smaller scope project that helped me learn the ins and
+                outs of the Vulkan API along with practicing data-oriented design
+                patterns. I also just love boids and the greater topic of autonomous
+                agents as described by Craig Reynolds. Staring at this simulation while it's
+                running is absolutely mesmerizing.
+            </p>
+
+            <h3>Skills Used</h3>
+            <ul>
+                <li>C++</li>
+                <li>Slang (shader language)</li>
+                <li>Vulkan</li>
+                <li>Data-oriented design</li>
+                <li>Parallelization</li>
+            </ul>
+
+            <h2>Gallery</h2>
+
+            <div class="img-showcase">
+                <div class="zoom-bg"></div>
+                <img class="click-zoomable" src="media/boids_vk/boids_01.png" alt="A sphere of boids from a distance">
+                <img class="click-zoomable" src="media/boids_vk/boids_02.png" alt="Inside a sphere of boids swarming">
+                <img class="click-zoomable" src="media/boids_vk/boids_03.png"
+                    alt="Up-close view of multi-colored bird-shaped boid model">
+            </div>
+
+        </section>
+    </main>
+
+    <footer></footer>
+</body>
+
+</html>

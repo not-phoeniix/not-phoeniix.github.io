@@ -12,13 +12,13 @@ function getNavbarHtml(relPrefix) {
             <div class="dropdown">
                 <a class="bar-link" href="javascript:void(0)">Projects <i class="nf nf-fa-angle_down"></i></a>
                 <div class="dropdown-content">
+                    <a href="${relPrefix}boids_vk.html">boids_vk</a>
                     <a href="${relPrefix}sprks_engine.html">Sprks Engine</a>
                     <a href="${relPrefix}skinneret.html">SKINNERET</a>
                     <a href="${relPrefix}nullspace.html">Nullspace</a>
-                    <a href="${relPrefix}skip_loop_process.html">SKIP_LOOP_PROCESS</a>
                     <a href="${relPrefix}changeling.html">Changeling VR</a>
-                    <a href="${relPrefix}watchfaces.html">Watchfaces</a>
                     <a href="${relPrefix}desktop.html">Linux Deskstop</a>
+                    <a href="${relPrefix}watchfaces.html">Pebble Watchfaces</a>
                 </div>
             </div>
 
