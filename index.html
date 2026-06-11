@@ -8,37 +8,52 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div class="grid-parent">
+<body class="grid-parent">
 
-        <nav class="sidebar">
-            <h1 class="font-display">
-                <span class="col-accent">not-phoeniix</span>
-                <span class="size-small col-muted">[Nikki]</span>
+    <section class="sidebar">
+        <img class="avatar" src="https://github.com/not-phoeniix.png" alt="not-phoeniix avatar">
+
+        <section class="hero font-display">
+            <h1 class="name-header">
+                <span class="col-accent size-bigger">not-phoeniix</span>
             </h1>
+            <span class="col-fg-secondary size-big">Nikki</span>
+            <span class="size-regular col-fg-muted">[she/they]</span>
+        </section>
+    </section>
 
-            <section class="links">
-                <h2>nav</h2>
-                <code class="font-mono"><pre>
-<a href="/">home/</a>
-<a href="projects/">projects/</a>
-<a href="contact/">contact/</a>
-            </pre></code>
-            </section>
-        </nav>
+    <nav class="nav-links flex horiz text-center font-mono size-regular">
+        <a class="grow active" href="/">home/</a>
+        <a class="grow" href="projects/">projects/</a>
+        <a class="grow" href="contact/">contact/</a>
+    </nav>
 
-        <main class="main-content">
+    <div class="main-content">
+
+        <main>
+            <h2 class="col-accent">home/</h2>
+
             <section class="section">
-                <h2>wow</h2>
+                <h3>wow</h3>
                 <p>this is a tiny description</p>
             </section>
             <section class="section">
-                <h2>hullo</h2>
+                <h3>hullo</h3>
                 <p>second section</p>
+            </section>
+
+            <section class="section">
+                <h3>interests</h3>
+                <ul class="tags">
+                    <li class="tag">C++</li>
+                    <li class="tag">App Dev</li>
+                    <li class="tag">Graphics Programming</li>
+                </ul>
             </section>
         </main>
 
     </div>
+
 </body>
 
 </html>
