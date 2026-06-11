@@ -1,0 +1,89 @@
+:root {
+    --width: 90%;
+    --max-width: 900px;
+
+    --color-fg: white;
+    --color-fg-muted: gray;
+    --color-bg: black;
+    --color-bg-secondary: #131313;
+    --color-accent: red;
+    --color-accent-muted: crimson;
+
+    --content-padding: 20px;
+    --border-radius: 10px;
+}
+
+* {
+    color: var(--color-fg);
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--color-bg);
+    width: var(--width);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 20px;
+    height: 100vh;
+}
+
+/* #region layout */
+
+.grid-parent {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    gap: 20px;
+}
+
+.sidebar {
+    grid-column-start: 1;
+    padding: var(--content-padding);
+    border-radius: var(--border-radius);
+    background-color: var(--color-bg-secondary);
+}
+
+.main-content {
+    grid-column-start: 2;
+    padding: var(--content-padding);
+    border-radius: var(--border-radius);
+    background-color: var(--color-bg-secondary);
+}
+
+.content {
+    margin-bottom: 2.5rem;
+}
+
+/* #endregion */
+
+/* #region sizes */
+
+.size-small {
+    font-size: 0.8em;
+}
+
+/* #endregion */
+
+/* #region styles */
+
+.col-accent {
+    color: var(--color-accent);
+}
+
+.col-accent-muted {
+    color: var(--color-accent-muted);
+}
+
+.col-fg-muted {
+    color: var(--color-fg-muted);
+}
+
+.font-mono {
+    font-family: monospace;
+}
+
+.font-display,
+.font-display * {
+    font-family: monospace;
+}
+
+/* #endregion */
