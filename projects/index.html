@@ -8,41 +8,49 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 
-<body>
-    <div class="grid-parent">
+<body class="grid-parent">
 
-        <nav class="sidebar">
-            <h1 class="font-display">
-                <span class="col-accent">not-phoeniix</span>
-                <span class="size-small col-muted">[Nikki]</span>
-            </h1>
+    <section class="sidebar">
+        <img class="avatar" src="https://github.com/not-phoeniix.png" alt="not-phoeniix avatar">
 
-            <section class="links">
-                <h2>nav</h2>
-                <code class="font-mono"><pre>
-<a href="/">home/</a>
-<a href="projects/">projects/</a>
-<a href="contact/">contact/</a>
-            </pre></code>
-            </section>
-        </nav>
+        <section class="font-display">
+            <h1 class="name-header col-accent size-bigger">not-phoeniix</h1>
+            <span class="col-fg-secondary size-big">Nikki</span>
+            <span class="size-regular col-fg-muted">[she/they]</span>
+        </section>
+    </section>
 
-        <main class="main-content">
-            <section class="section">
-                <h2>proj1</h2>
-                <p>i work on games</p>
-            </section>
-            <section class="section">
-                <h2>proj2</h2>
-                <p>i work on engines</p>
-            </section>
-            <section class="section">
-                <h2>proj3</h2>
-                <p>i work on apps</p>
-            </section>
-        </main>
+    <nav class="nav-links flex horiz text-center font-mono size-regular">
+        <a class="grow" href="/">home/</a>
+        <a class="grow active" href="/projects/">projects/</a>
+        <a class="grow" href="/info/">info/</a>
+    </nav>
 
-    </div>
+    <main class="main-content">
+        <h2 class="col-accent size-bigger">projects/</h2>
+
+        <section class="section">
+            <h3>SPRKS ENGINE</h3>
+            <p>ambitious project? at such a young age? truly burnout-worthy</p>
+
+            <ul class="tags">
+                <li class="tag">C#</li>
+                <li class="tag">MonoGame</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h3>SKINNERET</h3>
+            <p>scairy game</p>
+
+            <ul class="tags">
+                <li class="tag">Godot</li>
+                <li class="tag">GDScript</li>
+            </ul>
+        </section>
+
+    </main>
+
 </body>
 
 </html>

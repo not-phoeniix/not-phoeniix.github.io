@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap');
+@import url('https://www.nerdfonts.com/assets/css/webfont.css');
 
 :root {
     --width: 100%;
@@ -16,20 +17,21 @@
     --content-padding: 1em;
     --border-radius: 0;
 
+    --font-main: sans-serif;
     --font-display: "Oxygen Mono", monospace;
     --font-mono: monospace;
 
-    --bg-size: 300px;
+    --bg-size: 400px;
 }
 
 * {
     color: var(--color-fg);
-    font-family: sans-serif;
+    font-family: var(--font-main);
 }
 
 html,
 body {
-    background-color: var(--color-bg);
+    background-color: #888;
 }
 
 body {
@@ -39,6 +41,7 @@ body {
     background-image: url("media/bg_dark.png");
     background-repeat: repeat;
     background-size: var(--bg-size);
+    background-blend-mode: multiply;
 
     animation: bg-scroll 20s infinite;
     animation-timing-function: linear;
@@ -76,6 +79,7 @@ body {
 .tags {
     display: flex;
     list-style-type: none;
+    flex-wrap: wrap;
     padding: 0;
 }
 
@@ -89,6 +93,7 @@ body {
 
 .flex {
     display: flex;
+    justify-content: center;
 }
 
 .flex>.grow {
@@ -101,6 +106,19 @@ body {
 
 .flex.vert {
     flex-direction: column;
+}
+
+.section {
+    margin-bottom: 3.0rem;
+}
+
+.centered-hero {
+    display: flex;
+    flex-direction: column;
+}
+
+.centered-hero>* {
+    margin: 1rem;
 }
 
 /* #endregion */
@@ -119,14 +137,25 @@ body {
 
 .nav-links>* {
     padding: 20px;
+    transition: 80ms;
+}
+
+.nav-links>*,
+.nav-links>*:link {
+    text-decoration: none;
 }
 
 .nav-links>*:hover {
-    background-color: red;
+    background-color: var(--color-accent);
+    color: var(--color-fg);
 }
 
 .avatar {
     width: 100%;
+}
+
+.home-links>* {
+    padding: 0.7em;
 }
 
 /* #endregion */
