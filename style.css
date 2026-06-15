@@ -365,6 +365,12 @@ a:hover * {
     .main-content {
         grid-column: 1;
         grid-row: 2;
+        min-height: unset;
+    }
+
+    body {
+        height: unset;
+        min-height: 100vh;
     }
 
     .avatar {
