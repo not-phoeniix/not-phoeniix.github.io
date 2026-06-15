@@ -4,9 +4,9 @@
 @import url('https://www.nerdfonts.com/assets/css/webfont.css');
 
 :root {
-    --width: 80%;
-    --max-width: 800px;
-    --gaps: 2rem;
+    --width: 70%;
+    --max-width: 700px;
+    --gaps: 1.0rem;
 
     --color-fg: white;
     --color-fg-secondary: #8d8f9f;
@@ -36,7 +36,10 @@
     font-weight: var(--font-main-weight);
 }
 
-html,
+html {
+    background-color: var(--color-bg);
+}
+
 body {
     background-color: #666;
 }
@@ -58,8 +61,6 @@ main {
     width: var(--width);
     max-width: var(--max-width);
     margin: 0 auto;
-    overflow-y: scroll;
-    height: 100%;
 }
 
 a,
@@ -81,7 +82,7 @@ a:hover * {
 
 .grid-parent {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: auto 1fr;
 }
 
 .sidebar,
@@ -93,10 +94,10 @@ a:hover * {
     grid-column: 1;
     grid-row: 1;
     padding: var(--content-padding);
-    border-top-right-radius: var(--border-radius-big);
-    border-bottom-right-radius: var(--border-radius-big);
+    border-radius: var(--border-radius-big);
     background-color: var(--color-bg);
-    border-left: unset;
+    margin: var(--gaps);
+    margin-right: 0;
 }
 
 .main-content {
@@ -205,6 +206,12 @@ a:hover * {
     margin: 2rem 0 0 0;
 }
 
+.scroll-container {
+    overflow-y: scroll;
+    min-height: 1px;
+    height: 100%;
+}
+
 /* #endregion */
 
 /* #region specific elements */
@@ -229,7 +236,7 @@ a:hover * {
 }
 
 .avatar {
-    width: 100%;
+    width: 300px;
     border-radius: var(--border-radius-big);
 }
 
@@ -340,8 +347,6 @@ a:hover * {
 
 @media screen and (max-width: 950px) {
     :root {
-        --gaps: 1rem;
-        --content-padding: 1rem;
         --width: 100%;
         --max-width: unset;
     }
@@ -354,11 +359,11 @@ a:hover * {
     .sidebar {
         grid-column: 1;
         grid-row: 1;
-        border: 1px solid var(--color-accent);
         border-top: unset;
-        border-top-right-radius: unset;
+        border-radius: unset;
         border-bottom-right-radius: var(--border-radius-big);
         border-bottom-left-radius: var(--border-radius-big);
+        margin: 0 var(--gaps);
         display: flex;
     }
 
