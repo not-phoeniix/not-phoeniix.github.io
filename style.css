@@ -192,7 +192,8 @@ a:hover * {
 .centered-hero {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 95%;
+    max-width: 30rem;
     margin: 0 auto;
 }
 
@@ -230,6 +231,10 @@ a:hover * {
 .avatar {
     width: 100%;
     border-radius: var(--border-radius-big);
+}
+
+.info-link {
+    margin-bottom: 0.5em;
 }
 
 /* #endregion */
@@ -395,6 +400,16 @@ a:hover * {
 
     .nav-links {
         margin-bottom: 10px;
+    }
+
+    .size-bigger,
+    .size-bigger * {
+        font-size: 1.5rem;
+    }
+
+    .size-biggest,
+    .size-biggest * {
+        font-size: 2.0rem;
     }
 }
 
