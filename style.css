@@ -110,10 +110,6 @@ a:hover * {
     min-height: 1px;
 }
 
-.content {
-    margin-bottom: 2.5rem;
-}
-
 .tags {
     display: flex;
     list-style-type: none;
@@ -148,7 +144,7 @@ a:hover * {
 }
 
 .section {
-    margin-bottom: 2.0rem;
+    margin: 1.0rem 0;
 }
 
 .project {
@@ -241,7 +237,7 @@ a:hover * {
 }
 
 .info-link {
-    margin-bottom: 0.5em;
+    margin: 0.5em 0;
 }
 
 /* #endregion */
@@ -410,7 +406,7 @@ a:hover * {
     }
 
     .nav-links {
-        margin-bottom: 10px;
+        margin: 10px 0;
     }
 
     .size-bigger,
