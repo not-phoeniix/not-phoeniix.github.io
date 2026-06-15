@@ -36,6 +36,10 @@
     font-weight: var(--font-main-weight);
 }
 
+p {
+    color: var(--color-fg-secondary);
+}
+
 html {
     background-color: var(--color-bg);
 }
@@ -206,6 +210,11 @@ a:hover * {
     overflow-y: scroll;
     min-height: 1px;
     height: 100%;
+}
+
+.inline-link,
+.inline-link:link {
+    text-decoration: underline;
 }
 
 /* #endregion */
