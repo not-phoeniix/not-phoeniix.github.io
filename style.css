@@ -133,6 +133,7 @@ a:hover * {
 .flex {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .flex>.grow {
@@ -364,12 +365,9 @@ a:hover * {
     .sidebar {
         grid-column: 1;
         grid-row: 1;
-        border-top: unset;
-        border-radius: unset;
-        border-bottom-right-radius: var(--border-radius-big);
-        border-bottom-left-radius: var(--border-radius-big);
-        margin: 0 var(--gaps);
         display: flex;
+        margin: var(--gaps);
+        margin-bottom: 0;
     }
 
     .main-content {
